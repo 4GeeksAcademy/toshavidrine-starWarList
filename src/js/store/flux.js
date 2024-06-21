@@ -1,45 +1,69 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			people: [],
+			planets: [],
+			starships: [],
+			favorites: [],
+		
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+		
+
+			
+
+			fetchPeople: async () => {
+				
+				try {
+					const response = await fetch(`https://www.swapi.tech/api/people/`);
+					const data = await response.json();
+					setStore({people: data.results });
+				} catch (error) {
+					console.error(`Error fetching people:`, error);
+				}
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+
+			fetchPlanets: async () => {
+				try {
+					const response = await fetch(`https://www.swapi.tech/api/planets/`);
+					const data = await response.json();
+					setStore({planets: data.results });
+				} catch (error) {
+					console.error(`Error fetching planets:`, error);
+				}
 			},
-			changeColor: (index, color) => {
-				//get the store
+
+			fetchStarships: async () => {
+				try {
+					const response = await fetch(`https://www.swapi.tech/api/starships/`);
+					const data = await response.json();
+					setStore({starships: data.results });
+				} catch (error) {
+					console.error(`Error fetching starships:`, error);
+				}
+			},
+
+		
+
+			addFavorites: (name, uid, type) => {
 				const store = getStore();
+				const newFavorite = { name, uid, type }; 
+				const newFavorites = [...store.favorites, newFavorite];
+				setStore({ favorites: newFavorites });
+			},
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+			removeFavorites: (name) => {
+				const store = getStore();
+				const newFavorites = store.favorites.filter(favorite => favorite.name !== name);
+				setStore({ favorites: newFavorites });
+			},
 
-				//reset the global store
-				setStore({ demo: demo });
-			}
+			
+
+		
 		}
 	};
 };
 
 export default getState;
+n
