@@ -1,13 +1,13 @@
 import React from "react";
-
-export const Card = (props) => {
+import {Link} from "react-router-dom";
+export const Card = ({item,category}) => {
     return (
         <div className="card" style={{ width: "18rem" }}>
             <img src="..." className="card-img-top" alt="..." />
             <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">{item.name}</h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+                <Link to={"/detail-view/"+category+"/"+item.uid}><a href="#" className="btn btn-primary">Go somewhere</a></Link>
             </div>
         </div>
     )
