@@ -5,6 +5,7 @@ import { createRoot } from 'react-dom/client';
 // Include your index.css file into the bundle
 import '../styles/index.css';
 
+
 // Import your own components
 import Layout from './layout';
 

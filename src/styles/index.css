@@ -1,3 +1,62 @@
-/* 
-    General Styles
-*/
+/* index.css */
+
+/* Global styles */
+body {
+    font-family: 'Star Jedi', sans-serif; /* Use Star Wars font or a similar sci-fi font */
+    background-color: #000; /* Dark background */
+    color: #fff; /* Light text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Card styles */
+.card {
+    width: 18rem;
+    position: relative;
+    background-color: #1c1c1c; /* Dark background color */
+    color: #fff;
+    border: 1px solid #444;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin: 20px;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: #ccc; /* Lighter text color */
+}
+
+.btn-primary {
+    background-color: #feda4a; /* Star Wars yellow */
+    border-color: #feda4a;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: 'Star Jedi', sans-serif; /* Button font */
+}
+
+.btn-primary:hover {
+    background-color: #feda4a; /* Hover color */
+    border-color: #feda4a;
+    color: #000;
+}
+
+.favorite-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #feda4a; /* Star Wars yellow */
+    cursor: pointer;
+}
+
+.favorite-button:hover {
+    color: #ffc107; /* Brighter yellow on hover */
+}
