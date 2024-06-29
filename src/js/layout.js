@@ -8,6 +8,7 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { DetailView } from './views/detailView';
+import '../styles/index.css'; // Ensure you create this CSS file
 
 // Create your first component
 const Layout = () => {
@@ -17,8 +18,8 @@ const Layout = () => {
 
 	return (
 		<div>
-			<header>
-				<h1>Star Wars Favorite Project</h1>
+			<header className="header">
+				
 			</header>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
