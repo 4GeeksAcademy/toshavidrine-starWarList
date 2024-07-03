@@ -38,21 +38,63 @@ export const DetailView = (props) => {
 			</div>
 			<div className="row">
 				{params.category === "people" && (
-					<div className="col">
-						<h5>Gender:</h5>
-						<p>{item?.properties.gender}</p>
+					<div className="row">
+						<div className="col-3">
+							<h5>Gender:</h5>
+							<p>{item?.properties.gender}</p>
+						</div>
+						<div className="col-3">
+							<h5>Birth Year:</h5>
+							<p>{item?.properties.birth_year}</p>
+						</div>
+						<div className="col-3">
+							<h5>Eye Color:</h5>
+							<p>{item?.properties.eye_color}</p>
+						</div>
+						<div className="col-3">
+							<h5>Hair Color:</h5>
+							<p>{item?.properties.hair_color}</p>
+						</div>
 					</div>
 				)}
 				{params.category === "planets" && (
-					<div className="col">
-						<h5>Diameter:</h5>
-						<p>{item?.properties.diameter}</p>
+					<div className="row">
+						<div className="col">
+							<h5>Climate:</h5>
+							<p>{item?.properties.climate}</p>
+						</div>
+						<div className="col">
+							<h5>Diameter:</h5>
+							<p>{item?.properties.diameter}</p>
+						</div>
+						<div className="col">
+							<h5>Gravity:</h5>
+							<p>{item?.properties.gravity}</p>
+						</div>
+						<div className="col">
+							<h5>Orbital Period:</h5>
+							<p>{item?.properties.orbital_period}</p>
+						</div>
 					</div>
 				)}
 				{params.category === "starships" && (
-					<div className="col">
-						<h5>Manufacturer:</h5>
-						<p>{item?.properties.manufacturer}</p>
+					<div className="row">
+						<div className="col">
+							<h5>Manufacturer:</h5>
+							<p>{item?.properties.manufacturer}</p>
+						</div>
+						<div className="col">
+							<h5>Model:</h5>
+							<p>{item?.properties.model}</p>
+						</div>
+						<div className="col">
+							<h5>Starship Class:</h5>
+							<p>{item?.properties.starship_class}</p>
+						</div>
+						<div className="col">
+							<h5>Hyperdrive Rating:</h5>
+							<p>{item?.properties.hyperdrive_rating}</p>
+						</div>
 					</div>
 				)}
 				{/* Add more properties here as needed */}

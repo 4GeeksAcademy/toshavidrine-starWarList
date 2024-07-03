@@ -17,7 +17,7 @@ export const Card = ({ item, category }) => {
     return (
         <div className="card" style={{ width: "18rem", position: "relative" }}>
             <img 
-                src="https://www.google.com/url?sa=i&url=https%3A%2F%2Foutschool.com%2Fclasses%2Fthe-verbs-star-wars-challenge-o6xSfq1s&psig=AOvVaw3mc6CrB81FlVeGuDLUwNaw&ust=1719624365491000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMjp_oD5_oYDFQAAAAAdAAAAABAE" 
+                src="https://st.depositphotos.com/2420147/2658/i/450/depositphotos_26587843-stock-photo-spaceship-interior-center-view.jpg" 
                 className="card-img-top" 
                 alt="Star Wars" 
             />
